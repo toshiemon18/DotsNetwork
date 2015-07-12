@@ -1,12 +1,20 @@
+#pragma once
+
 #include "ofMain.h"
 
 class Dots : public ofBaseApp {
 
-    public: 
-        float radius;
-        float LimitOfDistance;
-        ofVec3f vec;
+    public:
+        void set(float x, float y, float z, float r);
+        void setLocation(ofVec3f l);
+        void update();
+        float getX();
+        float getY();
 
-        void set(ofVec3f v, float radius);
+        ofVec3f loc;
+        ofVec3f vel;
+        float radius;
+        float damping;
+        float limit_of_dist;
 
 };
